@@ -1,0 +1,20 @@
+.form_common_input_code{
+    width: 45%;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 16px;
+    padding: 0.4rem 1.8rem 0.4rem 0.6rem;
+    color: #666;
+    text-align: left;
+}
+.code{
+    color: #fff;
+    text-align: center;
+    font-size:16px;
+    float: right;
+    width: 32%;
+    padding: 0.4rem 0;
+    background-color: #0079c3;
+    border-radius: 0.5rem;
+}

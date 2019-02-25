@@ -1,0 +1,12 @@
+<div style="background-color: white;position: relative">
+    <input :duplex="@code" class="form_common_input_code"
+           :attr="{maxlength:@maxlength,type:@type,placeholder:@placeholder}"
+           data-toggle="tooltip" data-placement="top" title="图形验证码"/>
+
+    <img :if="@codeUrl" style="width: 82px;position: absolute;right: 10px;top: 15%" :attr="{src:@codeUrl}" alt="" onclick="" :click="@changeCode">
+
+    <div :if="@codeUrl == ''" class="code" :click="@verificationCode">
+        点击发送
+    </div>
+
+</div>

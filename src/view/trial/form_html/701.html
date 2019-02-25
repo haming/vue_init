@@ -1,0 +1,161 @@
+<div class="col-xs-12 col-sm-7 conter-right">
+    <div class="col-xs-12 col-sm-12 center-top center-top-border">
+        <div class="titleImg1 ">
+            保险方案
+        </div>
+    </div>
+    <div class="inputBorder">
+        <!--为谁投保-->
+        <div class="col-xs-12 col-sm-12 center-right-list">
+            <div class="col-xs-4 col-sm-3 list-left">为谁投保:</div>
+            <div class="col-xs-8 col-sm-9 cleanSelectIcon">
+                <select id="relationship" class="input-xlarge mobile_select form-control form"
+                        ms-duplex='@order_to_premiul_trial_form_widget.form[0].relationship.value'>
+                    <option :for='(index,item) in @order_to_premiul_trial_form_widget.form[0].relationship.candidateArray'
+                            :attr="{value:@item.key}">
+                        {{@item.value| nullFilter}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12  div_line"></div>
+        <!--出生日期-->
+        <div class="col-xs-12 col-sm-12 center-right-list">
+            <div class="col-xs-4 col-sm-3 list-left" for="datetimepicker">出生日期:</div>
+            <div class="col-xs-8 col-sm-9 cleanSelectIcon" style="background: none">
+                <input type="text" id="datetimepicker"
+                       :attr="{startDate:@order_to_premiul_trial_form_widget.form[0].birthday.start,endDate:@order_to_premiul_trial_form_widget.form[0].birthday.end}"
+                       class="form-control background_white  withForIput datetimepicker form" placeholder=""
+                       :duplex="@order_to_premiul_trial_form_widget.form[0].birthday.value | nullFilter"
+                       readonly>
+            </div>
+        </div>
+        <div class="col-xs-12  div_line"></div>
+        <!--性别-->
+        <div class="col-xs-12 col-sm-12 center-right-list">
+            <div class="col-xs-4 col-sm-3 list-left">性别:</div>
+            <div class="col-xs-8 col-sm-9  cleanSelectIcon">
+                <select class="input-xlarge mobile_select form-control form"
+                        :duplex="@order_to_premiul_trial_form_widget.form[0].sex.value">
+                    <option :for='(index,item) in @order_to_premiul_trial_form_widget.form[0].sex.candidateArray'
+                            :attr="{value:@item.key}">
+                        {{@item.value}}
+                    </option>
+                </select>
+
+            </div>
+        </div>
+        <div class="col-xs-12  div_line"></div>
+        <!--保险期间-->
+        <div class="col-xs-12 col-sm-12 center-right-list">
+            <div class="col-xs-4 col-sm-3 list-left">保险期间:</div>
+            <div class="col-xs-8 col-sm-9  cleanSelectIcon">
+                <select class="input-xlarge mobile_select form-control form" id="Insurance_period_years"
+                        :duplex="@order_to_premiul_trial_form_widget.form[0].insuYear.value">
+                    <option :for="($index,item) in @order_to_premiul_trial_form_widget.form[0].insuYear.candidateArray"
+                            :attr="{value:@item.key}">
+                        {{@item.name}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12  div_line"></div>
+        <!--交费期间-->
+        <div class="col-xs-12 col-sm-12 center-right-list">
+            <div class="col-xs-4 col-sm-3 list-left">交费期间:</div>
+            <div class="col-xs-8 col-sm-9  cleanSelectIcon">
+                <select class="input-xlarge mobile_select form-control form"
+                        :duplex="@order_to_premiul_trial_form_widget.form[0].payEndYear.value">
+                    <option :for='($index,item) in @order_to_premiul_trial_form_widget.form[0].payEndYear.candidateArray'
+                            :attr="{value:item.key}">
+                        <span>{{item.name| nullFilter}}</span>
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12  div_line"></div>
+        <!--交费方式-->
+        <div class="col-xs-12 col-sm-12 center-right-list">
+            <div class="col-xs-4 col-sm-3 list-left">交费方式:</div>
+            <div class="col-xs-8 col-sm-9 list-right1">
+                <span :visible="@order_to_premiul_trial_form_widget.form[0].payEndYear.value == '0'">一次性交清</span>
+                <span :visible="@order_to_premiul_trial_form_widget.form[0].payEndYear.value != '0'">年交</span>
+            </div>
+        </div>
+        <div class="col-xs-12  div_line"></div>
+        <div class="col-xs-12 col-sm-12 center-right-list">
+            <div class="col-xs-3 col-sm-3 list-left">主险:</div>
+            <div class="col-xs-9 col-sm-9 list-right1">
+                <span>招商信诺安康万家重大疾病保险</span>
+            </div>
+        </div>
+        <div class="col-xs-12  div_line"></div>
+        <div class="col-xs-12 col-sm-12 center-right-list">
+            <div class="col-xs-4 col-sm-3 list-left" for="exampleInputPassword1">保险金额:</div>
+            <div class="col-xs-8 col-sm-9 cleanColPadding" style="padding-left: 0;padding-right: 0;text-align: right">
+                <!--保险金额-->
+                <input type="tel" class="form-control background_white withToInput form_blur" id="exampleInputPassword1"
+                       placeholder="请输入" maxlength="3" :duplex="@order_to_premiul_trial_form_widget.form[0].amnt.value">
+                <span style="margin-left: 8px">万元</span>
+                <span class="homeLogin" onclick="" :click="@clickEliminate"></span>
+            </div>
+        </div>
+        <div class="col-xs-12  div_line"></div>
+
+        <!--可选附加险-->
+        <div class="col-xs-12 col-sm-12 center-right-list"
+             :visible="@order_to_premiul_trial_form_widget.form[0].payEndYear.value != '0'">
+            <div class="col-xs-3 col-sm-3 list-left1 marginBottom" style="line-height: 20px">(必选) 附加险：</div>
+            <div class="col-xs-9 col-sm-9 list-right1" style="line-height: 20px">
+                <span>招商信诺附加安康万家豁免保险费疾病保险</span>
+            </div>
+        </div>
+        <div style="height: 45px;" :visible="@order_to_premiul_trial_form_widget.form[0].payEndYear.value == '0'"></div>
+        <div>
+            <div class="col-xs-12 col-sm-12 center-right-list lineHight"
+                 style="padding-top: 10px;margin-bottom: 5px">
+                <div class="col-xs-3 col-sm-3 list-left1 marginBottom"><span class="backgou">可选</span>附加险:</div>
+                <div class="col-xs-9 col-sm-9 list-right1">
+                    <span style="color: #3aaaf8;line-height: 20px">招商信诺附加安康万家特定恶性肿瘤疾病保险</span>
+                </div>
+            </div>
+            <!--附加险金额-->
+            <div class="col-xs-12 col-sm-12 center-right-list" style="margin-top: 0">
+                <div class="col-xs-4 col-sm-3 list-left" for="exampleInputPassword1">保险金额:</div>
+                <div class="col-xs-8 col-sm-9 cleanColPadding">
+                    <input type="tel" class="form-control background_white withToInput form_blur"
+                           id="exampleInputPassword2"
+                           placeholder="请输入"
+                           maxlength="3"
+                           :duplex="@order_to_premiul_trial_form_widget.form[1].amnt.value">
+                    <span style="margin-left: 8px">万元</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 center-right-list footer">
+        <span>
+        <a target="_blank" :if="@auxProperties.currentPremiumUrl_click == true"
+           :attr="{href:@auxProperties.currentPremiumUrl}"
+           style="color: #2179ce;text-decoration: underline;cursor:pointer;">点击查看现金价值表</a>
+        <div style="color: #3aaaf8;text-decoration: underline;cursor:pointer;" onclick=""
+             :click="currentPremiumUrlNoClick"
+             :if="@auxProperties.currentPremiumUrl_click == false">点击查看现金价值表</div>
+        </span>
+        </div>
+
+        <div style="clear: both"></div>
+
+        <div :if="@premiul_body_check_widget.visible"
+             style="color: rgb(246, 104, 86);font-size: 12px;text-indent: 31px">
+            <div style="word-break: break-all;">
+                被保险人的参保额度达到体检标准，请提供12个月以内个人年度体检报告且体检项目须包含：{{@premiul_body_check_widget.value}}
+            </div>
+            <div>
+                若个人年度体检报告项目不符合以上项目要求（如缺项、漏项），则须降低保额至无体检要求。例如：仅参保主险且保额在{{@premiul_body_check_widget.leastValue}}万以内，则不用提交体检报告。
+            </div>
+            <!-- <div :if="isExtraInsured">若个人年度体检报告项目不符合以上项目要求（如缺项、漏项），则须降低保额至无体检要求。例如：仅参保主险且保额在{{@premiul_body_check_widget.leastValue}}万以内，则不用提交体检报告。</div> -->
+        </div>
+
+    </div>
+</div>

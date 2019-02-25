@@ -1,0 +1,725 @@
+.background_white {
+  background-color: white !important;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #7a7a7a;
+  opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #7a7a7a;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  color: #7a7a7a;
+  opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+  color: #7a7a7a;
+  opacity: 1;
+}
+
+select:-ms-input-placeholder {
+  color: #7a7a7a;
+  opacity: 1;
+}
+
+select::-webkit-input-placeholder {
+  color: #7a7a7a;
+  opacity: 1;
+}
+
+/* 日期控件的placeholder */
+.dateinput input:-ms-input-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.dateinput input::-webkit-input-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.dateinput select:-ms-input-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.dateinput select::-webkit-input-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/**/
+
+.btn_orange {
+  background-color: #3aaaf8 !important;
+}
+
+.form-control[disabled] {
+  background-color: #ffffff;
+}
+
+.form-control {
+  cursor: pointer;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.zhenai3_content {
+  width: 100%;
+  padding: 0;
+}
+
+.center {
+  max-width: 980px;
+  margin: 4rem auto 0;
+  overflow: hidden;
+}
+
+.benren {
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0 0.5rem 0;
+}
+
+.home {
+  max-width: 980px;
+  overflow: hidden;
+  /*background: #f5f6f7;*/
+  margin: 4% auto 0;
+  padding: 2rem 0;
+}
+
+.center-top {
+  font-size: 18px;
+  color: black;
+  padding: 0;
+}
+
+.titleImg1 {
+  background: url("../../imgs/info/aki_28.png") no-repeat center;
+  background-size: 100% 100%;
+  width: 150px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px 5px 8px 5px;
+  color: #FFFFFF;
+  font-size: 18px;
+
+}
+
+.titleImgForNo {
+  background: url("../../imgs/info/aki_28.png") no-repeat center;
+  background-size: 100% 100%;
+  width: 260px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px 5px 10px 15px;
+  color: #FFFFFF;
+  font-size: 18px;
+
+}
+
+.center-top-border {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-bottom: 4px solid #3aaaf8;
+}
+
+.titleImg {
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+
+}
+
+.InputBorder {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0 10px 0;
+  border: 1px solid #d8eefe;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 0;
+}
+
+.center-list-right-icon2 {
+  background: url("../../imgs/info/aki_25.png") no-repeat center right;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 24%;
+  color: #2179ce;
+  font-size: 14px;
+  font-weight: bold;
+  background-size: 8%;
+}
+
+.center-list-right-icon {
+  background: url("../../imgs/info/aki_25.png") no-repeat center right;
+  background-size: 23%;
+  cursor: pointer;
+  width: 7%;
+  margin-top: 10px
+}
+
+.bottomPlugIn {
+  width: 100%;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.bottomPlugIn1 {
+  width: 96%;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.titleImg img {
+  width: 100%;
+}
+
+.gendersMain {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: white;
+  color: #888888;
+  float: left;
+  width: 45%;
+  text-align: center;
+}
+
+.positionLine {
+  width: 1px;
+  background-color: white;
+  height: 16px;
+  position: absolute;
+  top: 8px;
+  left: 28px;
+}
+
+.center-list2 {
+  margin-top: 0;
+}
+
+.gendersMain2 {
+  border: 1px solid #3aaaf8;
+  border-radius: 4px;
+  background-color: #3aaaf8;
+  color: white;
+  float: left;
+  width: 45%;
+  text-align: center;
+}
+
+.box1 {
+  color: #FFFFFF;
+  background: #3aaaf8;
+  border-radius: 5px;
+  padding: 6px 0;
+}
+
+.box2 {
+  background: none;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 6px 0;
+}
+.cleanSelectIcon {
+  border-radius: 5px;
+  /*padding-left: 0px !important;*/
+  padding-right: 0px !important;
+  border: 1px solid #bfbfbf;
+  overflow: hidden;
+}
+
+.cleanSelectIcon select {
+  border: 0;
+}
+
+.ceshiAddress {
+  margin-right: 10px;
+  float: left;
+  width: 15%;
+}
+
+.ceshiAddressDetail {
+  padding: 0 1em 0 1em;
+  line-height: 30px;
+  height: 30px;
+  border: 1px solid #bebec0;
+  border-radius: 4px;
+  width: 45%
+}
+
+/*标题*/
+.center-top div {
+}
+
+.center-list-left-emali {
+  width: 21%;
+}
+
+.center-list1 {
+  margin-top: 16px;
+}
+
+.center-list-left {
+  margin-top: 9px;
+  padding-left: 0px;
+  padding-right: 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.center-list-right {
+  padding-right: 0px;
+}
+
+center-list-right2 {
+  height: inherit;
+  padding-left: 15px;
+}
+
+/*被保险人出生日期那里*/
+.birthday {
+  margin-top: 9px;
+}
+
+.footer-buttom {
+  margin: 3rem 0 15rem;
+  text-align: center;
+}
+
+.footer-buttom span {
+  color: #ffffff;
+  border-radius: 6px;
+  width: 220px;
+  display: block;
+  margin: 0 auto;
+  height: 44px;
+  line-height: 44px;
+  font-size: 18px;
+}
+
+.address_select {
+  margin-top: 0;
+
+}
+
+.col-sm-10 {
+  width: 89.33%;
+}
+
+.address_select select {
+  width: 100%;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  background-color: #ffffff;
+  /*margin-right: 13px !important;*/
+}
+
+.taxInput select {
+  cursor: pointer;
+}
+
+.Check {
+  cursor: pointer;
+}
+
+.death i {
+  float: left;
+  font-style: normal;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #3583ff;
+  border-radius: 50%;
+  margin-top: 0.2rem;
+  text-align: center;
+  line-height: 15px;
+  color: #fff;
+  margin-left: 4.5%;
+}
+
+.death p {
+  width: 36%;
+  text-align: center;
+  color: #595758;
+  font-size: 14px;
+  line-height: 15px;
+  height: 15px;
+  /*background: url("./fading.png") no-repeat right center;*/
+  background-size: 10%;
+  padding-right: 1.2rem;
+}
+
+/*制作弹窗*/
+.all {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: 100;
+  background: #333333;
+  /*background:rgba(51, 51, 51, 0.8) none repeat scroll 0 0 !important;*/
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/*中间内容*/
+.all .all_center {
+  width: 94%;
+  max-width: 600px;
+  /*height: 69%;*/
+  background: #ffffff;
+  margin: 20% auto 0;
+  border-radius: 6px;
+  padding: 5% 0;
+}
+
+/*x号的*/
+.all_delail {
+  width: 100%;
+  text-align: right;
+  padding-bottom: 10%;
+}
+
+.all_delail img {
+  float: right;
+  width: 6%;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
+/*hear*/
+.all_hear {
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  background: #3f98d0;
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+}
+
+/*文字*/
+.all_text {
+  text-align: center;
+  line-height: 1.2rem;
+  width: 96%;
+  margin: auto;
+  border-spacing: 0;
+  padding-top: 10%;
+  color: #666666;
+}
+
+.all_text thead {
+  background: red;
+}
+
+.all_text td {
+  border: 1px solid #666666;
+  font-size: 14px;
+  padding: 5px;
+  line-height: 20px;
+}
+
+.sure {
+  width: 60%;
+  padding: 0.4rem;
+  background: #3f98d0;
+  text-align: center;
+  margin: auto;
+  border-radius: 6px;
+  margin-top: 3%;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.i5Explain {
+  font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+
+  .center-list {
+    height: 4rem;
+  }
+
+  .modal_tips2 {
+    height: auto;
+  }
+
+  /*.residentFlagSelection {*/
+  /*margin-left: 65px;*/
+  /*}*/
+  .all .all_center {
+    margin: 255px auto 0;
+    padding: 15px 0;
+
+  }
+
+  .bfcs {
+    display: none;
+  }
+
+}
+
+.addressWidth {
+  width: 10.66%
+}
+
+.center-list-left-width {
+  width: 23%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.residetWith {
+  padding: 0;
+  width: 12%;
+}
+
+.yunagongWith {
+  /*width: 16%;*/
+}
+
+@media screen and (max-width: 991px) {
+  .addressWidth {
+    width: 16%
+  }
+
+  .col-sm-10 {
+    width: 84%;
+  }
+
+  .yunagongWith {
+    width: 24%;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .center {
+    max-width: 95%;
+    margin: 4rem auto 0;
+    overflow: hidden;
+  }
+}
+
+/*大于等于 768px*/
+
+@media screen and (max-width: 768px) {
+  label{
+    position: relative;
+    top: -2px;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+
+  select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+  }
+  .ceshiAddress {
+    width: 33%;
+    margin-right: 0;
+  }
+
+  .ceshiAddressDetail {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .form-control1 {
+    width: 100%;
+    cursor: pointer;
+    /*padding: 6px 100px 6px 12px;*/
+    background-color: transparent;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .yunagongWith {
+    width: 100%;
+  }
+
+  .marginForTop {
+    margin-top: 0.7rem;
+  }
+
+  .paddinfLeft {
+    padding: 0;
+  }
+
+  .titleImg img {
+    width: 200%;
+  }
+
+  .home {
+    overflow: hidden;
+    margin: 0 auto 4% auto;
+    padding: 0 0 2rem 0;
+  }
+  .residetWith {
+    width: 35%;
+  }
+
+  .center-list-right-icon2 {
+    background: url("../../imgs/info/aki_25.png") no-repeat center right;
+    cursor: pointer;
+    margin-top: 2px;
+    width: 213px;
+    color: #2179ce;
+    font-size: 14px;
+    font-weight: bold;
+    background-size: 14px;
+  }
+
+  .center-list-right-icon {
+    background: url("../../imgs/info/aki_25.png") no-repeat center right;
+    background-size: 14px;
+    cursor: pointer;
+    width: 45px;
+    margin-top: 10px
+  }
+
+  .center-list-left-width {
+    width: 45%;
+  }
+
+  .InputBorder {
+    padding-top: 2%;
+    border: 0;
+  }
+
+  .center-list-right2 {
+    padding-left: 0;
+  }
+
+  .address_select select {
+    margin-right: 8px !important;
+    font-size: 11px;
+    padding-left: 12px;
+  }
+
+  .col-sm-10 {
+    width: 100%;
+  }
+
+  .center-list-left {
+    margin-top: 9px;
+    padding-left: 0px;
+    padding-right: 0;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .addressWidth {
+    width: 100%
+  }
+
+  .i5Explain {
+    font-size: 13px;
+  }
+
+  .residentFlagSelection {
+    padding-right: 0;
+    padding-left: 5px;
+  }
+
+  .center-list {
+    margin-bottom: 3%;
+  }
+
+  .center-list1 {
+    margin-top: 0;
+  }
+
+  .center-list-left {
+    margin-bottom: 0.5rem;
+  }
+
+  .center-list-right {
+    padding-left: 0;
+  }
+
+  .center-top {
+    /*padding:0  1.5rem;*/
+    margin-bottom: 0;
+  }
+
+  .center {
+    margin: 0 auto 35px;
+  }
+
+  .taxPadding {
+    padding: 0;
+  }
+
+  .res_footer {
+    display: none;
+  }
+
+  .footer-buttom {
+    display: none;
+  }
+
+  .bfcs {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1.3rem 0;
+    background: #3aaaf8;
+    color: #ffffff;
+    position: fixed;
+    z-index: 10000;
+    bottom: 0;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .death {
+    margin-bottom: 1%;
+  }
+
+  .all_text td {
+    font-size: 12px;
+    padding: 2px;
+  }
+
+  .name3 {
+    padding-right: 0;
+  }
+
+  .cleanSelectIcon {
+    border: 1px solid #ccc;
+    background: url("../../imgs/info/aki_34.png") no-repeat center right 10px;
+    background-size: auto 38%;
+    padding-right: 8% !important;
+  }
+
+}
+
+.res_footer {
+  position: fixed !important;
+  bottom: 0 !important;
+}
+
+/*input,*/
+/*textarea {*/
+/*border: 0; !* 方法1 *!*/
+/*-webkit-appearance: none; !* 方法2 *!*/
+/*}*/

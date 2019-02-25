@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>登录页</title>
+</head>
+<body :controller="vm" class="ms-controller">
+<div class="showHera">
+    <wbr is="ms-navigation">
+</div>
+<!--<wbr is="ms-alert-modal" :widget="{cancel:'',confirm:'确定'}"/>-->
+
+<div id="start" style="width: 100%;margin: 0 auto;display: none">
+
+    <div class="inputBody">
+        <div class="sendCodePopUp" :if="@auxProperties.sendCodePopUp">
+            <div class="main">发送成功</div>
+        </div>
+        <div class="inputCenter">
+            <div class="title1">快 速 登 录</div>
+
+            <div ms-html="@auxProperties.formHtml | nullFilter"></div>
+
+            <!--点击下一步登录-->
+            <div class="input_main_contain_bottom" style="width: 100%">
+                <div>
+                    <div :visible="!@auxProperties.allowNext" class="new_botton_contain_disAgree">
+                        点 击 进 入
+                    </div>
+                    <div :visible="@auxProperties.allowNext" class="new_botton_contain_next" id="next" onclick=""
+                         :click="@clickNext">
+                        点 击 进 入
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <form id="loginForm" :attr="{action:@auxProperties.loginUrl}" method="post"
+          class="bs-docs-example form-horizontal" style="text-align: center;">
+        <input type="hidden" name="mobile_phone" :duplex="@userInfo.mobile_phone">
+        <input type="hidden" name="verification_code" :duplex="@userInfo.verification_code">
+        <input type="hidden" name="authImage_Code" :duplex="@userInfo.authImage_Code">
+    </form>
+</div>
+
+<wbr is="ms-footer"/>
+
+</div>
+</body>
+</html>

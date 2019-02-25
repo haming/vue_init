@@ -1,0 +1,368 @@
+html, body {
+  /*width: 100%;*/
+  /*height: 100%;*/
+}
+
+.login_top {
+  text-align: left;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.login_logo {
+  width: 350px;
+}
+
+.login_logo img {
+  width: 212px;
+}
+
+.res_footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.imgCode {
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+
+.sendCodePopUp {
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.sendCodePopUp .main {
+  margin: 30% auto;
+  width: 30%;
+  max-width: 200px;
+  text-align: center;
+  background-color: rgba(148, 148, 148, 0.57);
+  border-radius: 5px;
+  color: white;
+  padding: 15px;
+  border: 1px solid transparent;
+  z-index: 99;
+}
+
+.notice-of_insurance {
+  padding: 0 0.8rem;
+}
+
+.notice-of_insurance .text {
+  font-size: 1.1em;
+  color: #666;
+}
+
+/*边框*/
+.ip_top {
+  background-color: white;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.notice-of_insurance .text p {
+  margin-top: 0.5rem;
+  text-indent: 2em;
+  color: #666;
+  line-height: 1.5rem;
+  font-size: 1.1em;
+
+}
+
+.notice-of_insurance .text p span {
+  color: #00aaff;
+}
+
+.form_slot:last-child {
+  margin-bottom: 6.6rem
+}
+
+.title1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #262728;
+  margin-bottom: 6%;
+}
+
+.title2 {
+  font-size: 28px;
+  font-weight: bold;
+  font-style: oblique;
+  color: #3aa3f3;
+}
+
+._form_common_input_phone1 {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 14px;
+  text-align: left;
+  color: #595758;
+}
+
+._form_common_input_phone2 {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 15px;
+  /*padding: 0rem 0 0rem 50px;*/
+  text-align: left;
+  color: #595758;
+}
+
+.sms_code {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 37%;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  float: right;
+  background-color: #00aaff;
+  border-radius: 3rem;
+}
+
+.form_common_input_code {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 16px;
+  padding: 0.4rem 1.8rem 0.4rem 0.6rem;
+  color: #666;
+  text-align: left;
+}
+
+.form_common_input_SMSCode {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+}
+
+.input_border {
+  border-radius: 0;
+  border: none;
+  position: relative;
+  padding: 14px 0;
+}
+
+.input_border_buttom {
+  position: relative;
+  border-bottom: 1px solid #beb8b8;
+}
+
+.input_border .icon {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  width: 25px;
+  height: 25px;
+}
+
+.input_code {
+  width: 64%;
+}
+
+.sms_input {
+  position: relative;
+}
+
+.new_botton_contain {
+  cursor: pointer;
+}
+
+.new_botton_contain_next {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 17px;
+  background: #00aaff;
+  padding: 0.85rem 0;
+  border-radius: 3rem;
+  border-bottom: 4px solid #00aaff;
+  margin: 50px 0 5px 0;
+}
+
+.index_res_footer {
+  text-align: center;
+  width: 100%;
+  padding: 30px 15px;
+  background-color: #00aaff;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+html, body {
+  background-color: #f4f5f7;
+}
+
+@media (min-width: 769px) {
+  .login_top {
+    width: 980px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  /*.showHera {*/
+  /*display: none;*/
+  /*}*/
+  .inputBody {
+    overflow: hidden;
+    position: relative;
+    background: none !important;
+    width: 100% !important;
+    margin: 0% auto 0;
+  }
+
+  .selectLanguage {
+    position: absolute;
+    right: 10px !important;
+    top: 10px !important;
+  }
+
+  html, body {
+    background-color: #ffffff !important;
+  }
+
+  .inputCenter {
+    width: 85% !important;
+    overflow: hidden;
+    margin: 10% auto 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .login {
+    display: block !important;
+  }
+
+  .title1 {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .login_top {
+    padding-left: 20px;
+  }
+
+  .sms_code {
+    width: 43%;
+  }
+
+  .input_code {
+    width: 54%;
+  }
+
+  .imgCode {
+    width: 40%;
+  }
+
+  .index_res_footer {
+    position: relative;
+  }
+
+  .login_logo img {
+    width: 147px;
+  }
+}
+
+.tip {
+  position: absolute;
+  color: red;
+  font-size: 13px;
+  top: 53px;
+  left: 5px;
+  display: none;
+}
+
+.inputBody {
+  overflow: hidden;
+  position: relative;
+  width: 485px;
+  margin: 0 auto 0;
+  background: url("./img/ipmi_img_60.png") no-repeat center;
+  background-size: 100%;
+}
+
+.inputCenter {
+  width: 75%;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding: 75px 0;
+}
+
+.selectLanguage {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+
+}
+
+.Language {
+  padding-right: 10px;
+  float: left;
+  line-height: 30px;
+}
+
+.selectButtom select {
+  width: 100%;
+  border: none;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url("./img/ipmi_img_43.png") no-repeat right center;
+  background-size: 25%;
+}
+
+.selectButtom {
+  width: 65px;
+  float: left;
+  border-radius: 3px;
+  border: 1px solid #e2e2e2;
+  padding: 3px 5px;
+  background: white;
+}
+
+.login {
+  display: none;
+}
+
+.login img {
+  width: 60%;
+}
+
+.clean {
+  position: absolute;
+  right: 0;
+  top: 16px;
+  width: 5%;
+}
+
+.clean img {
+  width: 100%;
+}
+
+.input_main_contain {
+  width: 100%;
+}

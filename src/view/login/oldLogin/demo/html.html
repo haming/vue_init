@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="jQuery-1.4.4.min.js"></script>
+<script>
+
+    var vm = {
+        userInfo: {
+            employee_number: '1000000',
+            employee_name: '测试',
+            mobile_phone: '13511110211',
+            type: '801',
+            organization_id: 'pension',
+            verification_code: '8888',
+        },
+        // url_: 'http://192.168.199.149:8064/gis_server/uat/op/pension/',
+        url_: 'http://hms-uat.test-cignacmb.com/gis_server/uat/op/pension/',
+        post: function (interfaceName, data) {
+            $.ajax({
+                url: vm.url_ + interfaceName,
+                type: 'post',
+                timeout: 180000,
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+                    console.log('success')
+                },
+                error: function (res, error) {
+                    console.log('error')
+                }
+            });
+        },
+
+        login: function () {
+            var dataToPost = this.userInfo;
+            vm.post("userLogin", dataToPost);
+        },
+    };
+    vm.login()
+</script>

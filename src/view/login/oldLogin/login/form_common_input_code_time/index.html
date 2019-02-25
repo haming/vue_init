@@ -1,0 +1,14 @@
+<div >
+    <input :duplex="@code" class="form_common_input_code" style="background-color: white;width: 72%"
+           :attr="{maxlength:@maxlength,type:@type,placeholder:@placeholder}"
+           data-toggle="tooltip" data-placement="top" title="短信验证码"/>
+    <div :if="@code_time" class="code" id="code" style="background:#dfdfdf;color: #7e7e7e">
+        <div>{{@code_times}}s</div>
+    </div>
+
+    <div :if="!@code_time" class="code" onclick="" :click="@verificationCode">
+        点击发送
+    </div>
+
+
+</div>

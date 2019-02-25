@@ -1,0 +1,16 @@
+<div class="modal_tips_contain" :if="isShowModal"
+     :attr="{style:'width:' + @modalWidth + 'px;' + 'height:' + @modalHeight + 'px;'}">
+    <div class="modal_tips1">
+        <div class="modal_tips_header">{{title}}</div>
+        <div class="modal_tips_content">
+            <div>{{content1}}</div>
+            <div>{{content2}}</div>
+        </div>
+        <div class="modal_tips_btn_group">
+            <div onclick="" :visible="@cancel!=''" :click="@modal_cancel" class="modal_tips_cancel">{{cancel}}</div>
+            <div onclick="" :click="@modal_confirm" :class="[@cancel!=''? 'modal_tips_confirm':'modal_tips_alone']">
+                {{confirm}}
+            </div>
+        </div>
+    </div>
+</div>

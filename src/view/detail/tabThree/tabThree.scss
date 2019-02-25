@@ -1,0 +1,161 @@
+
+.title {
+  color: #f14869;
+  position: relative;
+  padding-bottom: 6px;
+  font-size: 16px;
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+.title_img {
+  position: absolute;
+  top: 0;
+}
+
+.title_img1 img {
+  width: 62px;
+}
+
+.title_img2 img {
+  width: 50%;
+}
+
+.title_text {
+  width: 90%;
+  position: absolute;
+  top: 20px;
+  z-index: 100;
+  left: 70px;
+}
+
+.Tab1_line {
+  position: absolute;
+  left: 6px;
+  bottom: 0px;
+  width: 42px;
+  height: 1px;
+  background-color: #3aaaf8;
+}
+
+.clb {
+  clear: both;
+}
+
+.tab3_main {
+  max-width: 980px;
+  margin: 0 auto;
+
+}
+
+.tab3_item {
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.tab3_title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.tab3_left_icon {
+  padding-left: 0px;
+  text-align: center;
+
+}
+
+.tab3_left_icon .mobile_img {
+  width: 110%;
+  margin-left: 21%;
+  margin-top: 5%;
+}
+
+.tab3_left_icon img {
+  display: block;
+  width: 80%;
+}
+
+.tab3_right_f {
+  font-size: 14px;
+  padding: 0px 20px;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+.tab3_right_f .litop {
+  font-size: 16px;
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+
+.li {
+  font-size: 14px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.li .li-lf {
+  width: 25px;
+  display: inline-block;
+  float: left;
+}
+
+.li-lfo {
+  width: 4.5%;
+  float: left;
+}
+
+.li-rgo {
+  width: 87.5%;
+  float: left;
+}
+
+.li .li-rg {
+  width: 90%;
+  display: inline-block;
+  float: left;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 1010px) {
+  .tab3_main {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tab3_main {
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .tab3_left_icon .mobile_img {
+    margin-left: 0%;
+  }
+
+  .tab3_item {
+    margin-top: 30px;
+    overflow: hidden;
+  }
+
+  .tab3_title {
+    font-size: 18px;
+  }
+
+  .tab3_right_f {
+    padding: 0px 7.5px 10px;
+    width: 100%;
+  }
+
+  .li-lfo {
+    width: 37px;
+  }
+
+  .li-rgo {
+    width: 84.5%;
+    float: left;
+  }
+}
