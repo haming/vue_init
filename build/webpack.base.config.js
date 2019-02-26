@@ -17,7 +17,7 @@ const happyThreadPool = HappyPack.ThreadPool({size: os.cpus().length});
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 //项目名字
 const projectName = "/";
-var testEnv = "sit";
+var testEnv = "uat";
 
 var distEnv = new webpack.DefinePlugin({
     'NODE_ENV': '"' + testEnv + '"',
@@ -33,7 +33,7 @@ module.exports = {
     context: path.resolve(__dirname, '../'),
 
     entry: {
-        // app: './src/main.js',
+        app: './src/main.js',
         // trial: './src/view/trial/main.js',
         // detail: './src/view/detail/main.js',
         login: './src/view/login/main.js',
@@ -158,8 +158,10 @@ module.exports = {
                 //自动生成html文件
                 new HtmlWebpackPlugin({
                     filename: 'index.html',
+                    chunks: ['app'],
                     template: 'index.html',
-                    inject: true
+                    inject: true,
+                    hash: true	//为静态资源生成hash值
                 }),
                 new HtmlWebpackPlugin({
                     filename: 'login.html',	//生成的html存放路径，相对于 path
@@ -187,6 +189,7 @@ module.exports = {
                 host: 'hms-uat.test-cignacmb.com',
                 secure: false,
                 onProxyRes: function onProxyRes(proxyRes, req, res) {
+                    console.log("q34523452345")
                     if (proxyRes.headers.location) {
                         var address = getIpAddress()
                         proxyRes.headers.location = 'http://' + address + ':8050'; //重写重定向路径

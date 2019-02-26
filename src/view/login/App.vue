@@ -38,8 +38,6 @@
         <!--<input type="hidden" name="authImage_Code" :duplex="@userInfo.authImage_Code">-->
         <!--</form>-->
 
-        <div v-html="test">{{test}}</div>
-
         <input type="button" @click="userLogin()" value="userLogin(Get)"/>
         <input type="button" @click="getUserInfo()" value="getUserInfo(Get)"/>
         <input type="button" @click="change_input()" value="change_input(Get)"/>
@@ -49,14 +47,6 @@
     import inputNew from '../../components/inputNew.vue'
     import login_3 from './loginComponents/login_3.vue'
     // import test from './loginComponents/test.js'
-
-    var test = '<div>\n' +
-        '    <div>\n' +
-        '        测试\n' +
-        '    </div>\n' +
-        '</div>\n';
-    console.log(login_3);
-    console.log(test);
     import service from './service'
     import Warehouse from './Warehouse'
 
@@ -68,7 +58,6 @@
         },
         data() {
             return {
-                test: test,
                 // login_3: login_3,
                 parentMsg: {
                     id: 'id',

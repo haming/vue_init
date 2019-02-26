@@ -142,33 +142,6 @@ var centralService = {
             serviceNo: ""
         }
     },
-    // getDefaultInsuredInfosService: function (urlParams) {
-    //     return [{ //被保人信息
-    //         insuredseqNo: '1',
-    //         relationToAppnt: '00',
-    //         rankCode: '0',
-    //         rankName: '员工家属',
-    //         insuredName: '测试用户' + parseInt(Math.random() * 10000),
-    //         insuredIdtype: "I",
-    //         insuredIdno: "2342342342342342",
-    //         idExpDate: "2019-01-01",
-    //         idIsLongValid: 0,
-    //         insuredSex: "0",
-    //         insuredBirthday: "1980-01-01",
-    //         marriage: "",
-    //         nativePlace: "CHN",
-    //         personalIncome: "10",
-    //         occupationCode: "",
-    //         companyOrSchool: "测试机构",
-    //         mobilePhoneNumber: 13500000000 + parseInt(Math.random() * 10000),
-    //         contactProvince: '44',
-    //         contactCity: '4401',
-    //         contactDistrict: '440101',
-    //         contactDetailedAddress: '在在在在在',
-    //         email: "135@qq.com",
-    //         taxIdentity: "1",
-    //     }]
-    // },
     getDefaultInsuredInfosService: function (urlParams) {
         var result = [{ //被保人信息
             insuredseqNo: '1',
@@ -202,7 +175,6 @@ var centralService = {
         // }
         return result
     },
-
     getDefaultschemaInfoService: function (urlParams) {
         var that = this;
         var result = [{ //保险方案信息
@@ -224,12 +196,6 @@ var centralService = {
             prem: '',
             mult: '1',
         }];
-        // if (result.order_type == '701') {
-        //     result[0].relationship = '-1'
-        // } else {
-        //     result[0].relationship = '00'
-        // }
-
         //根据orderType选取riskCode
         var riskCode = "PNSD002"; //
         var products = that.getDefaultCandidateArrayService(urlParams).products.products;
@@ -511,10 +477,6 @@ var centralService = {
         var deferred = $.Deferred();
         var that = this;
         var dataToPost = {type: urlParams.order_type};
-        if (!dataToPost.type) {
-            dataToPost.type = '601'
-        }
-
         interfaces.post(urlParams.source + "/getUserInfo", dataToPost)
             .then(function (data) {
                 deferred.resolve(data);

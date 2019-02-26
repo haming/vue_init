@@ -7,7 +7,7 @@ var service = {
         var interfaceName = 'userLogin';
         var data = Warehouse.data.userInfo;
         $.ajax({
-            url: 'http://192.168.199.149:8064/gis_server/sit/service/pension/' + interfaceName,
+            url: '/gis_server/uat/service/pension/' + interfaceName,
             type: 'post',
             timeout: 180000,
             data: data,
@@ -28,7 +28,7 @@ var service = {
         var interfaceName = 'getUserInfo';
         var data = {};
         $.ajax({
-            url: 'http://192.168.199.149:8064/gis_server/sit/service/pension/' + interfaceName,
+            url: '/gis_server/uat/service/pension/' + interfaceName,
             type: 'post',
             timeout: 180000,
             data: data,
