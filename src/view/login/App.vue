@@ -39,7 +39,7 @@
         <!--</form>-->
 
         <input type="button" @click="userLogin()" value="userLogin(Get)"/>
-        <input type="button" @click="getUserInfo()" value="getUserInfo(Get)"/>
+        <input type="button" @click="getProductInfo()" value="getUserInfo(Get)"/>
         <input type="button" @click="change_input()" value="change_input(Get)"/>
     </div>
 </template>
@@ -49,6 +49,10 @@
     // import test from './loginComponents/test.js'
     import service from './service'
     import Warehouse from './Warehouse'
+
+    import axios from 'axios';
+
+    var qs = require('qs');
 
     export default {
         name: 'App',
@@ -67,34 +71,91 @@
                     type: 'text',
                     value: ''
                 },
+                // userInfo: {
+                //     employee_number: {
+                //         id: 'employee_number',
+                //         value: '',
+                //     },
+                //     employee_name: {
+                //         id: 'employee_name',
+                //         value: ''
+                //     },
+                //     mobile_phone: {
+                //         id: 'mobile_phone',
+                //         value: ''
+                //     },
+                //     verification_code: {
+                //         id: 'verification_code',
+                //         value: ''
+                //     },
+                // },
                 userInfo: {
-                    employee_number: {
-                        id: 'employee_number',
-                        value: '',
-                    },
-                    employee_name: {
-                        id: 'employee_name',
-                        value: ''
-                    },
-                    mobile_phone: {
-                        id: 'mobile_phone',
-                        value: ''
-                    },
-                    verification_code: {
-                        id: 'verification_code',
-                        value: ''
-                    },
-                },
+                    employee_number: 'EMP003',
+                    employee_name: '测试3',
+                    mobile_phone: '13511112043',
+                    type: '801',
+                    organization_id: 'zzrs',
+                    verification_code: '8888',
+                }
                 // userInfo: Warehouse.data.userInfo
             }
         },
+        mounted() {
+        },
         methods: {
-            userLogin: service.userLogin,
-            getUserInfo: service.getUserInfo,
+
+            userLogin: function () {
+                var deferred = Deferred();
+                var that = this;
+                this._interface("userLogin", this.userInfo)
+                    .then(function (data) {
+                        console.log("success")
+                        console.log(data)
+                    })
+                    .otherwise(function (msg) {
+                        console.log("error")
+                    });
+
+                return deferred.promise;
+            },
+            // userLogin:service.userLogin,
+            getProductInfo: function () {
+                var data = {
+                    organization_id: "zzrs",
+                    order_type: "801",
+                    source: "pension"
+                };
+                this._interface("getProductInfo", data)
+                    .then(function (data) {
+                        console.log("success")
+                        console.log(data)
+                    })
+                    .otherwise(function (msg) {
+
+                    });
+            },
+            // getProductInfo: service.getProductInfo,
             change_input: service.change_input,
             clickNext: function () {
-
             },
+            _interface: function (name, data) {
+                var deferred = Deferred();
+                var that = this;
+                axios({
+                    method: 'post',
+                    url: '/gis_server/uat/service/pension/' + name,
+                    data: qs.stringify(data),
+                    timeout: 180000,
+                    header: {
+                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                    }
+                })
+                    .then(function (response) {
+                        deferred.resolve(response)
+                    })
+
+                return deferred.promise;
+            }
         },
     }
 </script>

@@ -1,7 +1,11 @@
 import '../../common/common';
-import Warehouse from './Warehouse'
+import Warehouse from './Warehouse';
+
+
 
 var service = {
+
+
     userLogin: function () {
         var deferred = Deferred();
         var interfaceName = 'userLogin';
@@ -23,10 +27,14 @@ var service = {
         });
         return deferred.promise
     },
-    getUserInfo: function () {
+    getProductInfo: function () {
         var deferred = Deferred();
-        var interfaceName = 'getUserInfo';
-        var data = {};
+        var interfaceName = 'getProductInfo';
+        var data = {
+            organization_id: "zzrs",
+            order_type: "801",
+            source: "pension"
+        };
         $.ajax({
             url: '/gis_server/uat/service/pension/' + interfaceName,
             type: 'post',
