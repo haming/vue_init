@@ -115,7 +115,6 @@
                     .otherwise(function (msg) {
                         console.log("error")
                     });
-
                 return deferred.promise;
             },
             // userLogin:service.userLogin,
