@@ -16,8 +16,6 @@ var pagesConfig = {
         var plugins = []
         var pages = that.pages;
 
-        console.log("that.pages",that.pages)
-
         for (x in pages) {
             var module = pages[x];
             for (y in module) {

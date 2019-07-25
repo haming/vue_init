@@ -1,4 +1,4 @@
-8064//webpack.base config
+//webpack.base config
 const webpack = require('webpack');
 const path = require("path");
 const fs = require("fs");
@@ -198,7 +198,7 @@ module.exports = {
             }
         }
     }
-}
+};
 
 function getIpAddress() {
     var interfaces = require('os').networkInterfaces();

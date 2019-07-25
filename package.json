@@ -7,7 +7,7 @@
     "dev": "cross-env PROT=8001 node build/webpack.dev.config.js",
     "start": "webpack-dev-server --config ./build/webpack.base.config.js --host 0.0.0.0 --port 8060"
   },
-  "author": "wanwei",
+  "author": "hm",
   "license": "MIT",
   "engines": {
     "node": ">=7.0",
